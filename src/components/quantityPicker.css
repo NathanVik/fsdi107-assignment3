@@ -1,0 +1,9 @@
+.quantityPicker {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 100px;
+  margin: auto;
+  padding-bottom: 10px;
+}
