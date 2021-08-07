@@ -9,3 +9,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.filterButtons button{
+  margin-left: 5px;
+}

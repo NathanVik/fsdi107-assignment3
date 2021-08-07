@@ -17,12 +17,16 @@ class QuantityPicker extends Component {
     }
     increment = () => {
         if(this.state.quantity < 20 ){
-            this.setState( prevState =>({ quantity: prevState.quantity + 1 }) )
+            let qnty = this.state.quantity + 1;
+            this.setState( prevState =>({ quantity: prevState.quantity + 1 }) );
+            this.props.onChange(qnty);
         }
     }
     decrement = () => {
         if(this.state.quantity > 1) {
-            this.setState( prevState =>({ quantity: prevState.quantity - 1 }) )
+            let qnty = this.state.quantity - 1;
+            this.setState( prevState =>({ quantity: prevState.quantity - 1}) );
+            this.props.onChange(qnty);
         };
     }
 
