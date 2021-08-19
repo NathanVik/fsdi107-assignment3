@@ -45,7 +45,9 @@ class ItemService {
     //retrieve array of products
     return catalog;
   }
-  saveItem(item) {}
+  saveItem(item) {
+    console.log(`To Do: send item to server`);
+  }
 
   getItemDetails(id) {}
 }

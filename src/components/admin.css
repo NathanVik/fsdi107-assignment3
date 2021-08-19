@@ -1,0 +1,25 @@
+.admin{
+    padding: 2rem;
+    align-items: center;
+}
+.admin h1{
+    color: var(--nav-background);
+}
+
+.new-product {
+    border: 2px solid black;
+    width: 500px;
+    margin: auto;
+
+}
+.form-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.alert-saved{
+    color: green;
+    font-weight: bold;
+
+}

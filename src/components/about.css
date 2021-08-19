@@ -1,0 +1,16 @@
+
+.about {
+    padding: 2rem;
+}
+.about h1{
+    text-align: center;
+    color: var(--nav-primary);
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-weight: bold;
+}
+.about-text {
+    text-align: center;
+    color: var(--nav-background);
+    font-size: 1.2rem;
+    padding: 1rem;
+}

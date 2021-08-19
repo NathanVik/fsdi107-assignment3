@@ -14,7 +14,8 @@ class QuantityPicker extends Component {
                 <button className="btn-vittle" onClick={this.increment}>+</button>
             </div> 
          );
-    }
+    } // Render End
+    
     increment = () => {
         if(this.state.quantity < 20 ){
             let qnty = this.state.quantity + 1;

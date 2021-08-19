@@ -9,9 +9,10 @@ class NavBar extends Component {  //class component "cc"
             <nav>
                 <h4 className="nav-title">Vik's Vittles</h4>
                 <div className="menu-items">
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact</a>
+                    <a href="/">Home</a>
+                    <a href="/catalog">Catalog</a>
+                    <a href="/about">About Us</a>
+                    {/* <a href="#">Contact</a> */}
                 </div>
             </nav>
 
