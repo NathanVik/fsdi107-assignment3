@@ -38,7 +38,8 @@ class Admin extends Component {
                         <input type="text" className="form-input" name ="image" value={this.state.image} onChange={this.handleInputChange}></input>
                     </div>
                     <div className="form-item">
-                        <button type="button" className="btn-vittle btn-register" onClick={this.registerItem}>Add New Item</button> { this.state.showAlert ? <div className="alert-saved">Item Saved!</div> : null }
+                        <button type="button" className="btn-vittle btn-register" onClick={this.registerItem}>Add New Item</button>
+                        { this.state.showAlert ? <div className="alert-saved">Item Saved!</div> : null }
                     </div>
                 </form>
 

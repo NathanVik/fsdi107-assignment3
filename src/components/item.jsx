@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import QuantityPicker from './quantityPicker';
 import "./item.css";
+import storeContext from '../store/storeContext';
 
 class Item extends Component {
+    static contextType = storeContext;
     state = { 
         quantity: 1
      }
@@ -14,18 +16,22 @@ class Item extends Component {
                 <p>Unit Price: ${this.props.data.price.toFixed(2)}</p>
             <QuantityPicker onChange={this.handleQuantityChange}></QuantityPicker>
             <p>Total Price: {this.getTotal()}</p>
-            <button className="btn-vittle">Add to Cart <i className="fa fa-cart-plus"></i></button>
+            <button className="btn-vittle" onClick={this.handleAddToCart}>
+                Add to Cart <i className="fa fa-cart-plus"></i>
+            </button>
             </div>
          );
     }
 handleQuantityChange = (qnty) => {
-this.setState({ quantity: qnty });
-}
+    this.setState({ quantity: qnty });
+    };
 getTotal = () => {
     let total = this.state.quantity * this.props.data.price;
     return total.toFixed(2);
-}
-
+    };
+handleAddToCart = () => {
+    this.context.addProductToCart(this.props.data);
+    };
 }
  
 export default Item;

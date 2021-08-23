@@ -32,6 +32,10 @@ nav .menu-items a {
 nav .menu-items a:hover {
   color: var(--nav-primary);
 }
+nav .menu-items .cartButton{
+  border: 2px solid black;
+  border-radius: 7px;
+}
 
 /* nav .menu-items li.active a{
   background-color: var(--nav-primary);

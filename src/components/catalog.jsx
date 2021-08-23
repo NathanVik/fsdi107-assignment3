@@ -19,7 +19,7 @@ class Catalog extends Component {
         return ( 
         <div className="catalog">
             
-            <h3>Here's my catalogue</h3>
+            <h2>Here's my catalogue</h2>
             <h5>We have {this.state.catalog.length} products for your selection</h5>
             
             <div className="filterButtons">
