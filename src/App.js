@@ -5,8 +5,9 @@ import Catalog from "./components/catalog";
 import Home from "./components/home";
 import About from './components/about';
 import Admin from './components/admin';
-import GlobalState from "./store/globalContext";
 import Cart from './components/cart';
+
+import GlobalState from "./store/globalContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";

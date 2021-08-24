@@ -11,10 +11,9 @@ class GlobalState extends Component {
                     value={{
                         cart: this.state.cart,
                         addProductToCart: this.addProductToCart,
-                        removeProductFromCart: this.removerProductFromCart,
-
+                        removeProductFromCart: this.removeProductFromCart,
                     }}
-                    >
+                >
                     {this.props.children}
                 </storeContext.Provider>;
          
