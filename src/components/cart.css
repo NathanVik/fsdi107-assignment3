@@ -2,5 +2,18 @@
     margin-top: 2rem;
     font-family: Brush Script MT, Brush Script Std, cursive;
     font-weight: bold;
-  
+
+  }
+  .cart-container {
+    display: flex;
+
+
+  }
+  .cart-container .cart-detail{
+    flex:4;
+  }
+  .cart-container .cart-total{
+    flex:1;
+    width: 80%;
+    margin: auto 0;
   }

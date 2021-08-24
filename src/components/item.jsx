@@ -30,7 +30,12 @@ getTotal = () => {
     return total.toFixed(2);
     };
 handleAddToCart = () => {
-    this.context.addProductToCart(this.props.data);
+    //create object for the cart
+    let prod = {
+        ...this.props.data, // item information
+        quantity: this.state.quantity, // qnty from component state
+    };
+    this.context.addProductToCart(prod);
     };
 }
  

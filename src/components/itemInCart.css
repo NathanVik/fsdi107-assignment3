@@ -1,0 +1,45 @@
+.cartItem {
+    background-color: var(--nav-background);
+    border: 3px solid black;
+    border-radius: 8px;
+    display: flex;
+    color: var(--nav-text);
+    width: 85%;
+    align-items: center;
+    margin: auto auto 1rem;
+}
+.cartItem img {
+    width: 150px;
+    height: 150px;
+    margin: 1rem;
+}
+.cartItem .titleBox{
+    border: 2px solid black;
+    border-radius: 8px;
+    flex-basis: 350px;
+    padding: 1.8rem;
+}
+
+.cartItem .priceBox{
+    margin: 1rem;
+    flex-grow: 1;
+}
+.cartItem .quantBox{
+    margin: 1rem;
+    flex-grow: 1;
+}
+.cartItem .totalPriceBox{
+    margin: 1rem;
+    flex-grow: 1;
+}
+.cartItem button{
+    margin: 1rem;
+    flex-grow: 1;
+}
+.cartItem .remove-btn{
+    background-color: var(--nav-primary);
+    border-color: var(--nav-primary);
+}
+.cartItem .remove-btn:hover{
+    border-color: var(--nav-text);
+}
