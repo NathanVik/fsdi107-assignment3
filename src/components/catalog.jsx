@@ -46,9 +46,9 @@ class Catalog extends Component {
     }
     //best place to load server data here
     //executed after render
-    componentDidMount() {
+    async componentDidMount() {
     let service = new ItemService();
-    let data = service.getCatalog();
+    let data = await service.getCatalog();
 
     let categories = [];
     for(let i=0; i< data.length; i++) {

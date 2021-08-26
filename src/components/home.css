@@ -7,3 +7,21 @@
 .home {
     padding: 2rem;
 }
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.homeLink {
+    background-color: var(--nav-primary);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--nav-text);
+}
+.homeLink:hover {
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+}

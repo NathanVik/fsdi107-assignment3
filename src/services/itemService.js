@@ -1,3 +1,5 @@
+import axios from "axios";
+
 var catalog = [];
 // 9 products minimum
 
@@ -40,13 +42,15 @@ catalog.push(chocolate);
 catalog.push(coffee);
 
 class ItemService {
-  getCatalog() {
+  async getCatalog() {
+    //return catalog;
     //logic to call server
     //retrieve array of products
-    return catalog;
+    let response = await axios.get('http://127.0.0.1:5000/api/catalog');
+    return response.data;
   }
-  saveItem(item) {
-    console.log(`To Do: send item to server`);
+  async saveItem(item) {
+    await axios.post('http://127.0.0.1:5000/api/catalog', item);
   }
 
   getItemDetails(id) {}

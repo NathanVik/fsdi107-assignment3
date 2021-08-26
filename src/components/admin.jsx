@@ -46,13 +46,18 @@ class Admin extends Component {
             </div>
          );
     } //Render End
-    registerItem = () => {
+    registerItem = async () => {
         //create an object
         let item = { ...this.state }; // creates a copy of the state
-        console.log(item)
+        item.price = item.price * 1;
+        item.stock = +item.stock;
+        item.minimum = parseInt(item.minimum);
+        console.log(item);
+        
         //send object to service -> to server
+        
         let service = new ItemService();
-        service.saveItem(item);
+        await service.saveItem(item);
 
         //clear capture form
         this.setState({ title: "", category: "", price: "", image: "", showAlert: true });

@@ -43,9 +43,10 @@ class GlobalState extends Component {
     removeProductFromCart = (productId) => {
         let currentCart = [...this.state.cart];
 
-        for (let i = 0; i < currentCart.length; i++) {
+        for (let i = 0; i < currentCart.length; i++ ) {
             if( currentCart[i]._id === productId ){
                 currentCart.splice(i, 1);
+                break;
             };
         };
 

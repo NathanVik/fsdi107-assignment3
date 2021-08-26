@@ -39,7 +39,6 @@ getTotal = () => {
 
 handleDelete = (productId) => {
     let id = productId;
-    console.log(id);
     this.context.removeProductFromCart(id);
     };
 }

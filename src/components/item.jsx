@@ -13,7 +13,7 @@ class Item extends Component {
             <div className="itemFrame">
                 <img src={'/images/products/' + this.props.data.image} alt="product img" width="200" height="200"></img>
                 <h5>{this.props.data.title}</h5>
-                <p>Unit Price: ${this.props.data.price.toFixed(2)}</p>
+                <p>Unit Price: ${parseFloat(this.props.data.price).toFixed(2)}</p>
             <QuantityPicker onChange={this.handleQuantityChange}></QuantityPicker>
             <p>Total Price: {this.getTotal()}</p>
             <button className="btn-vittle" onClick={this.handleAddToCart}>
