@@ -25,7 +25,7 @@ class Cart extends Component {
                         <div className="cart-total">
                             <h4>Total Price: ${this.getTotal()}</h4>
                             <input type="text" placeholder="Coupon Code" name ="couponCode" value={this.state.couponCode} onChange={this.handleInputChange}></input>
-                            <button className="btn-vittle" onClick={this.applyCoupon}>Apply Coupon</button>
+                            <button disabled={!this.state.couponCode} className="btn-vittle" onClick={this.applyCoupon}>Apply Coupon</button>
                             <br></br>
                             <br></br>
                             <button className="btn-vittle" onClick={this.confirmOrder}>Confirm Order</button>
@@ -36,6 +36,11 @@ class Cart extends Component {
     }
 
 applyCoupon = async () => {
+    //check to make sure there is a code
+    if (!this.state.couponCode){
+        return;
+    }
+    
     // validate on server
     let service = new ItemService();
     let response = await service.validateCoupon(this.state.couponCode);
@@ -44,8 +49,6 @@ applyCoupon = async () => {
         this.setState({ "discount": 0});
         return;
     };
-    
-    console.log(response);
     this.setState({ "discount": response.discount });
 }
 
@@ -55,19 +58,22 @@ getTotal = () => {
         cartTotal += (this.context.cart[i].price * this.context.cart[i].quantity);
     };
     let discTotal = (cartTotal - (cartTotal * this.state.discount));
-    console.log(discTotal);
     return discTotal.toFixed(2);
     }
 
-confirmOrder = () => {
+confirmOrder = async () => {
     let order = {
         "userID" : 123,
         "discountCode": (this.state.couponCode),
         "cart": (this.context.cart),
     }
-    
-    console.log(order);
-    console.log(JSON.stringify(order));
+    let service = new ItemService();
+    let response = await service.submitOrder(order);
+    if (response) {
+        this.props.history.push("/complete");
+    }else{
+        //show error
+    };
 };
 
 handleInputChange = (event) => {

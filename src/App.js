@@ -6,6 +6,7 @@ import Home from "./components/home";
 import About from './components/about';
 import Admin from './components/admin';
 import Cart from './components/cart';
+import OrderComplete from './components/orderComplete';
 
 import GlobalState from "./store/globalContext";
 
@@ -13,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 
 
@@ -31,6 +33,7 @@ function App() {
               <Route path="/about" exact component={About}></Route>
               <Route path="/admin" exact component={Admin}></Route>
               <Route path="/cart" exact component={Cart}></Route>
+              <Route path="/complete" exact component={OrderComplete}></Route>
             </Switch>
 
           </div>

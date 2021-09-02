@@ -31,7 +31,6 @@ class GlobalState extends Component {
                 found = true;
             };
         }
-        //if exists, console log
         if(!found) {
             currentCart.push(product);
         }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var catalog = [];
+//var catalog = [];
 // 9 products minimum
 
 // class Product {
@@ -59,6 +59,16 @@ class ItemService {
   async validateCoupon(code) {
     let response = await axios.get('http://127.0.0.1:5000/api/coupons/search/' + code);
     return response.data;
+  }
+  //create submit order fn
+  async submitOrder(order){
+    let response = await axios.post('http://127.0.0.1:5000/api/orders', order);
+    if (response.status === 200){
+      return response.data;
+    } else {
+      console.error("error submitting", response.data);
+      return null;
+    }
   }
 
 }
