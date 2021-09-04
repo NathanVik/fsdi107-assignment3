@@ -15,6 +15,7 @@ class NavBar extends Component {  //class component "cc"
                     <Link to="/">Home</Link>
                     <Link to="/catalog">Catalog</Link>
                     <Link to="/about">About Us</Link>
+                    <Link to="/history">Order History</Link>
                     <Link to="/cart" className="cartButton"> &nbsp;View Cart [{this.context.cart.length}]&nbsp;</Link>
                 </div>
             </nav>

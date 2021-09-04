@@ -1,0 +1,14 @@
+.historyItem{
+    border: 1px solid black;
+    margin: 1.5rem auto auto;
+    width: 60%;
+    justify-content: center;
+    display: flex;
+}
+.historyItem .section{
+    display: inline-block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

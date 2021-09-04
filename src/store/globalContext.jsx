@@ -4,7 +4,7 @@ import storeContext  from './storeContext';
 class GlobalState extends Component {
     state = { 
         cart: [],
-
+        userID: 123,
      }
     render() { 
         return  <storeContext.Provider 

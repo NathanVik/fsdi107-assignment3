@@ -7,6 +7,7 @@ import About from './components/about';
 import Admin from './components/admin';
 import Cart from './components/cart';
 import OrderComplete from './components/orderComplete';
+import History from "./components/history";
 
 import GlobalState from "./store/globalContext";
 
@@ -34,6 +35,7 @@ function App() {
               <Route path="/admin" exact component={Admin}></Route>
               <Route path="/cart" exact component={Cart}></Route>
               <Route path="/complete" exact component={OrderComplete}></Route>
+              <Route path="/history" exact component={History}></Route>
             </Switch>
 
           </div>

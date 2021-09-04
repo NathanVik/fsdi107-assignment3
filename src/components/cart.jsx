@@ -63,9 +63,10 @@ getTotal = () => {
 
 confirmOrder = async () => {
     let order = {
-        "userID" : 123,
-        "discountCode": (this.state.couponCode),
-        "cart": (this.context.cart),
+        userID : 123,
+        discountCode: (this.state.couponCode),
+        cart: (this.context.cart),
+        createOn: new Date(),
     }
     let service = new ItemService();
     let response = await service.submitOrder(order);
